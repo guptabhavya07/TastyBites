@@ -31,6 +31,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Add this new GET route for testing
+app.get("/", (req, res) => {
+  res.json({ message: "Welcome to the API" });
+});
 app.get("/api/v1/test", (req, res) => {
   res.json({
     success: true,
